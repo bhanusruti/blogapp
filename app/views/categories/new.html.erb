@@ -1,0 +1,12 @@
+
+<h1>Blog Post Category</h1>
+
+<%= form_tag '/categories', method: :post do %>
+<div class='form-group'>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, "", placeholder: "Name of category", class: "form-control" %>
+</div>
+<div>
+<%= submit_tag "Create a Category!" %>
+</div>
+<% end %>

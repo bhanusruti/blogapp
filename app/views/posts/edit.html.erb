@@ -1,0 +1,11 @@
+<%= form_tag '/posts/#{post.id}', method: :patch do %>
+  <div>
+    <%= label_tag :title%>
+    <%= text_field_tag :title, @post.title %>
+  </div>
+  <div>
+    <%= label_tag :text %>
+    <%= text_field_tag :text, @post.text %>
+  </div>
+  <%= submit_tag "Update" %>
+<% end %>

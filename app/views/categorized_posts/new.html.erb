@@ -1,0 +1,9 @@
+<h1>Add Category</h1>
+<%= form_tag "/categorized_posts/#{params[:id]}", method: :post do %>
+  <div class="form-group">
+    <%= collection_select :category, :category_id, Category.all, :id, :name %>
+  </div>
+  <div>
+    <%= submit_tag "Add Category to Blog Post!" %> 
+  </div>
+<% end %>

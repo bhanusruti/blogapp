@@ -13,7 +13,7 @@ class UsersController < ApplicationController
    user = User.new(
       name: params[:name],
       email: params[:email],
-      password_digest: params[:password_digest],
+      password_confirmation: params[:password_confirmation]),
       
       if user.save
        flash[:success] = 'Successfully created account!'
@@ -21,7 +21,5 @@ class UsersController < ApplicationController
       else
         redirect_to '/signup'
       end
-
-   
   end
 end
